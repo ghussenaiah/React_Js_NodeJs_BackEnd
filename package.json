@@ -1,0 +1,25 @@
+{
+  "name": "prismserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node ./index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.17",
+    "prisma": "^3.9.2",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@material-ui/icons": "^4.11.2",
+    "@prisma/client": "^3.9.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
+}
