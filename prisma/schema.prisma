@@ -38,9 +38,10 @@ model User {
 
 model Employee {
   id        Int      @id @default(autoincrement())
-
+  jobTitle String   @db.VarChar(255)
   name     String   @db.VarChar(255)
   addresss String   @db.VarChar(255)
   order    String   @db.VarChar(255)
+  time  DateTime @default(now())
 
 }

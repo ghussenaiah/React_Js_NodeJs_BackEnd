@@ -32,11 +32,13 @@ const prisma = new PrismaClient()
   const datainfo= await prisma.employee.create({
     data: 
       
-      { name: req.body.name, addresss: req.body.address, order: req.body.order }
+      { name: req.body.name, addresss: req.body.address, order: req.body.order,time: new Date(req.body.date),
+        jobTitle:"hyderabad" }
     
   }) 
   res.json(datainfo);
 });
+
 
 app.get('/fetchall', async (req, res)=>{
   console.log("request",req);
@@ -124,6 +126,8 @@ app.delete('/delete', async (req, res)=>{
 
 
 app.put('/update/:id', async (req, res)=>{
+
+  
   console.log("request",req);
   console.log("request body",req.body);
   console.log("request body data",req.params);
